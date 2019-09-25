@@ -3,7 +3,23 @@ import Foundation
 // Find the most frequently occurring character in a given string
 
 func mostFrequentlyOccurringChar(in str: String) -> Character {
-    return "a"
+    var myDict = [Character:Int]()
+    var counter = -1
+    var myKey:Character = "c"
+    for i in str{
+        if myDict.keys.contains(i){
+            myDict[i]! += 1
+        }else {
+            myDict[i] = 1
+        }
+    }
+    for (k,v) in myDict{
+        if counter < v{
+            counter = v
+            myKey = k
+        }
+    }
+    return myKey
 }
 
 // Find the first indicies whose values sum to a given number
