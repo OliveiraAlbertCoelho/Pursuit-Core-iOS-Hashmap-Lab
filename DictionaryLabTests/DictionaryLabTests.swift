@@ -42,7 +42,7 @@ class DictionaryLabTests: XCTestCase {
     }
     
     func testUniqueValues() {
-        XCTAssertEqual(uniqueValues(in: ["hey", "there", "hey", "there", "hay"]), ["hey", "there", "hay"])
+        XCTAssertEqual(uniqueValues(in: ["hey", "there", "hey", "there", "hay"]), ["hay"])
         XCTAssertEqual(uniqueValues(in: ["Eveything", "is", "unique", "here"]), ["Eveything", "is", "unique", "here"])
         XCTAssertEqual(uniqueValues(in: ["a", "aa", "ba", "aa", "bb"]), ["a", "aa", "ba", "bb"])
     }
